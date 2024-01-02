@@ -1,0 +1,20 @@
+.btn-wrap{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-wrap .c-btn{
+    width: 30%;
+}
+.btn-wrap .c-btn .c-btn__link{
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 20px 10px;
+    display: block;
+}
+.btn-wrap .c-btn .c-btn__link--view{
+    background: #fff;
+}
