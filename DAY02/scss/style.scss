@@ -2,18 +2,130 @@
     background-color: #000;
     color: #fff;
     padding: 20px;
-    text-align: center
+    text-align: center;
+    position: sticky;
+    width: auto;
 }
 h1{
     @include header;
 }
-@mixin nav{
-    background-color: #d87b7b;
-    color: #000;
-    padding: 15px;
+@mixin navigation{
+    top: 0;
     margin: 0 auto;
+    display: flex;
     justify-content: space-between;
+    width: auto;
 }
 nav{
-    @include nav;
+    @include navigation;
 }
+ .navigation__d {
+    float: left;
+    width: calc(100%/3);
+    margin: 0 1px 0px;
+    text-align: center;
+    border: 1px solid;
+    padding: 20px 10px;
+    background-color: #eda8a8;
+}
+@mixin navigation__link{
+    color: #000;;
+    text-decoration: none;
+}
+a{
+    @include navigation__link;
+}
+.image{
+    width: 980px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+}
+@mixin image__bloc{
+     margin: 0 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.image__bloc{
+    @include image__bloc;
+}
+@mixin img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transform: scale(1);
+}
+img{
+    @include img;
+}
+.image__hover{
+    overflow: hidden;
+}
+ a:hover img {
+    transform: scale(1.05);
+    transition: all 1s ease;
+    overflow: hidden;
+}
+ .button__product{
+    width: 260px;
+    border: 2px solid #e43232;
+    padding: 10px;
+    text-align: center;
+    box-shadow: #e43232;
+    transform: skew(-15deg);
+    transition: background 1s ease;
+  }
+  .button__product{
+    &:hover{
+        opacity: 1;
+        transition: all 0.5s;
+        background-color: #da8e12;
+    }
+  }
+  .FAQ{
+    background-color: #e4329d;
+    padding: 14px;
+    width: 930px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  @mixin before{
+    content: "+";
+    position: absolute;
+    width: 1px;
+    height:10px;
+    left: 850px;
+    bottom: 5px;
+    margin-left: -70px;
+    background:$color;
+
+}
+
+.sign::after{
+    color: #fff;
+    content: "+";
+    position: absolute;
+    left: 1150px;
+    margin-left: -70px;
+    // right: 900px;
+}
+  .para{
+    width: 930px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  @mixin footer{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    width: auto;
+}
+address{
+    @include footer;
+}
+
